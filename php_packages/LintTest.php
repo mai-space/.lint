@@ -4,18 +4,18 @@ declare(strict_types = 1);
 
 namespace Vendor\Example;
 
-class LintTest
+final class LintTest
 {
     /**
      * Returns a simple greeting.
      */
     public function greet(string $name): string
     {
-        if (empty($name)) {
+        if ('' === $name) {
             return 'Hello, World!';
         }
 
-        return sprintf('Hello, %s!', $name);
+        return 'Hello, ' . $name;
     }
 
     /**
@@ -24,5 +24,23 @@ class LintTest
     public function add(int $a, int $b): int
     {
         return $a + $b;
+    }
+
+    /**
+     * Demonstrates strict type comparison.
+     */
+    public function isPositive(int $value): bool
+    {
+        return $value > 0;
+    }
+
+    /**
+     * @param array<int, mixed> $x
+     *
+     * @return array<int, mixed>
+     */
+    public function doStuff(array $x): array
+    {
+        return $x;
     }
 }
