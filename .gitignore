@@ -1,0 +1,35 @@
+# SYSTEM
+.DS_Store
+
+# IDE
+.idea
+
+# NODE
+node_modules/
+
+# BUILD
+dist/
+build/
+
+# REACT / NEXT.JS
+.next/
+next-env.d.ts
+
+# PHP / COMPOSER / SYMFONY / LARAVEL / TYPO3
+bin/
+vendor/
+var/
+
+# ENVIRONMENT
+.env
+
+# DATABASE / BACKUPS
+*.tgz
+*.tar.gz
+*.sql.gz
+
+# LOGS
+**/logs
+
+# TEMP
+tmp/
