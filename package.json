@@ -1,0 +1,44 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "Enter your description here...",
+  "author": "Your Name",
+  "type": "module",
+  "license": "proprietary",
+  "scripts": {
+    "lint:check": "npm run check:prettier && npm run check:stylelint && npm run check:eslint",
+    "lint:fix": "npm run fix:prettier && npm run fix:stylelint && npm run fix:eslint",
+    "check:prettier": "prettier --config prettier.config.mjs --check .",
+    "fix:prettier": "prettier --config prettier.config.mjs --write .",
+    "check:stylelint": "stylelint --config stylelint.config.mjs \"node_packages/**/*.{css,scss}\"",
+    "fix:stylelint": "stylelint --config stylelint.config.mjs \"node_packages/**/*.{css,scss}\" --fix",
+    "check:eslint": "eslint --config eslint.config.mjs .",
+    "fix:eslint": "eslint --config eslint.config.mjs --fix ."
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.6",
+    "@typescript-eslint/parser": "^8.33.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.28.0",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-tailwindcss": "^3.18.0",
+    "postcss": "^8.5.4",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.12",
+    "sass": "^1.89.1",
+    "stylelint": "^16.20.0",
+    "stylelint-config-recommended-scss": "^15.0.1",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-order": "^7.0.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.1"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "eslint-config-prettier": "^10.1.5",
+    "react": "^19.1.0"
+  }
+}
