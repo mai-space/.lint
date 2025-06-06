@@ -8,8 +8,8 @@
   "scripts": {
     "lint:check": "npm run check:prettier && npm run check:stylelint && npm run check:eslint",
     "lint:fix": "npm run fix:prettier && npm run fix:stylelint && npm run fix:eslint",
-    "check:prettier": "prettier --config prettier.config.mjs --check .",
-    "fix:prettier": "prettier --config prettier.config.mjs --write .",
+    "check:prettier": "prettier --config prettier.config.mjs --check . '!**/*.{lock}'",
+    "fix:prettier": "prettier --config prettier.config.mjs --write . '!**/*.{lock}'",
     "check:stylelint": "stylelint --config stylelint.config.mjs \"node_packages/**/*.{css,scss}\"",
     "fix:stylelint": "stylelint --config stylelint.config.mjs \"node_packages/**/*.{css,scss}\" --fix",
     "check:eslint": "eslint --config eslint.config.mjs .",
