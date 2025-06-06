@@ -21,6 +21,7 @@
     "rector/rector": "^1.2"
   },
   "scripts": {
+    "baseline": "phpstan analyse --generate-baseline=phpstan-baseline.neon",
     "lint:check": [
       "@check:editorconfig",
       "@check:phpcs",
@@ -42,7 +43,7 @@
     "fix:phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --config php-cs-fixer.php --ansi -- php_packages",
     "check:rector": "vendor/bin/rector process php_packages --dry-run --config rector.php",
     "fix:rector": "vendor/bin/rector process php_packages --config rector.php",
-    "check:phpstan": "phpstan analyse -c phpstan.neon -l 9 -- php_packages",
+    "check:phpstan": "phpstan analyse -c phpstan.neon -l max -- php_packages",
     "check:typoscript": "typoscript-lint --fail-on-warnings -c typoscript-lint.yml -- php_packages"
   },
   "config": {

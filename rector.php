@@ -12,6 +12,10 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::DEAD_CODE,
         SetList::STRICT_BOOLEANS,
         SetList::NAMING,
-        SetList::PHP_83,
+        SetList::PHP_84,
+        SetList::EARLY_RETURN,
+        SetList::INSTANCEOF,
+        Setlist::PRIVATIZATION,
+        SetList::TYPE_DECLARATION,
     ]);
 };

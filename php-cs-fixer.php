@@ -45,4 +45,14 @@ return (new PhpCsFixer\Config())
         'declare_equal_normalize' => ['space' => 'single'],
         'dir_constant' => true,
         'phpdoc_no_access' => true,
+        'class_attributes_separation' => [
+          'elements' => [
+            'property' => 'none'
+          ]
+        ],
+        'binary_operator_spaces' => [
+            'operators' => [
+                '=>' => 'align'
+            ]
+        ]
     ]);
