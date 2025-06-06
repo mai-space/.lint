@@ -7,7 +7,12 @@ export default {
   plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
     'at-rule-no-unknown': null,
-    'scss/at-rule-no-unknown': true,
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        'ignoreAtRules': ['tailwind']
+      }
+    ],
 
     // Possible errors
     'no-empty-source': true,
