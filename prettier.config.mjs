@@ -1,4 +1,3 @@
-// prettier.config.js or stylelint.config.js
 export default {
   semi: true,
   singleQuote: true,
